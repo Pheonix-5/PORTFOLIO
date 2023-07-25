@@ -362,3 +362,87 @@ section:nth-child(odd)
 .highlight{
     color: var(--secondary-darkcolor);
 }
+
+
+/* 
+ */
+
+
+ 
+.resume{
+    width: 55vw;
+    height: 100vh;
+    background-color: var(--secondary-darkcolor);
+    z-index: 10000;
+    position: fixed;
+    color:black ;
+}
+
+.resume a{
+    text-decoration: none;
+    color: #000;
+}
+
+.resume{
+    transform: translateX(-100%);
+    transition: all 0.5s linear;
+}
+
+.resume[data-visible = "true"]{
+    transform: translateX(0%);
+}
+
+.resume .header{
+    height:90vh;
+    border: 1px solid black;
+    margin: 8px;
+    font-size: 18px;
+
+}
+
+.name{
+    text-align: center;
+    font-weight: 900;
+    font-size: 25px;
+    margin-top: 10px;
+}
+
+.link{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    margin: 10px 20px 10px 20px;
+}
+
+.svg_s{
+    height: 20px;
+    width: 20px;
+    vertical-align:middle;
+}
+
+.svg_s path{
+    fill: rgb(0, 0, 0) !important;
+}
+
+.profile,.experience,.education, .skills, .language{
+    margin: 0 auto 0 auto;
+    width: 50vw;
+}
+.profile span, .experience span, .education span, .skills span, .language span{
+    font-size: 22px;
+    font-weight: 700;
+}
+ hr{
+    border: 1.5px solid black;
+}
+.download button{
+    background-color: var(--secondary-darkcolor);
+    border: 1px solid rgb(0, 0, 0);
+    color: rgb(0, 0, 0);
+    padding: 10px;
+    border-radius: 10%;    
+    float: right;
+    margin: 25px;
+    z-index: 1000000;
+}
