@@ -1,0 +1,364 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Chakra Petch', sans-serif;
+    list-style: none;
+}
+
+:root{
+    --mainscreen-color:#fff;
+    --main-color: #ff0101;
+    --second-color: #000000;
+    --nav-bar_color: #ffffff77;
+
+    --main-darkcolor:#000;
+    --secondary-darkcolor:#FBC02D;
+    --secondary-other-color:#fff;
+    --resume-color:#d3a01cb4;
+}
+
+
+
+body{
+    overflow-x: hidden;
+    width: 100vw;
+    background-color:var(--mainscreen-color) ;
+}
+
+#preloader{
+    background: #000 url(assest/loading.gif) no-repeat center ;
+    background-size: 25%;
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    z-index: 11000;
+}
+
+.copyright{
+    color: rgb(123, 123, 123);
+    text-align: center;
+    margin: 90vh 0 10px 0;
+}
+
+@media (max-width:426px){
+    #preloader{
+        background-size: 40% ;
+    }
+    .copyright{
+        font-size: 12px;
+    }
+    
+}
+
+header{
+    padding: 0 20px 10px 20px;
+    position: sticky;
+    top: 0;
+    background-color: var(--main-darkcolor);
+    z-index: 9999;
+}
+nav{
+    display: flex;
+}
+
+.active{
+    color: var(--secondary-darkcolor);
+}
+.active:hover{
+    color: var(--secondary-other-color);
+}
+
+nav{
+    justify-content: space-between;
+    gap: 4rem;
+    padding: 20px 100px 10px 50px;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a{
+    text-decoration: none;
+    color: var(--secondary-other-color);
+    transition: all 0.3s ease-in-out;
+}
+
+nav ul li{
+    font-weight: 600;
+}
+
+.not_mobile{
+    position: relative;
+}
+.not_mobile::after,.not_mobile::before{
+    content: '';
+    height: 1px;
+    width: 50px;
+    background-color: var(--secondary-darkcolor);
+    position: absolute;
+}
+
+.not_mobile::after{
+    top: 40%;
+    left: -35px;
+    transform: translate(-50%);
+
+}
+.not_mobile::before{
+    top: 40%;
+    right: -20%;
+    transform: translate(-50%);
+}
+
+
+
+nav span{
+    font-weight: 900;
+    font-size: larger;
+    color: var(--secondary-darkcolor);
+    transition: all 0.3s ease-in-out;
+}
+
+nav span:hover{
+    color: var(--secondary-other-color);
+}
+
+nav a:hover{
+    color: var(--secondary-darkcolor);
+}
+
+@media (max-width:426px){
+    .hamburgur{
+        display: block;
+    }
+    .navigation_bar{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;    
+    }
+    .not_mobile{
+        display: none;
+    }
+    nav span{
+        font-size: medium;
+    }
+}
+
+@media (min-width:427px){
+.navigation_bar .hamburgur{
+    display: none;
+}
+}
+
+.line{
+    width: 25px;
+    height: 3px;
+    border-radius: 30px;
+    background-color:var(--secondary-darkcolor);
+    position: relative;
+    margin-top: 10px;
+}
+
+.line::after, .line::before{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 3px;
+    border-radius: 30px;
+    background-color:inherit;   
+    transition: all 0.3s linear;
+}
+
+.line::after{
+    top: -7px;
+    
+}
+.line::before{
+    bottom: -7px;
+    
+}
+
+
+.for_low a{
+    text-decoration: none;
+    color:var(--second-color) ;
+}
+
+.for_low{
+    display: none;
+    float: right;
+    margin: 0 0px 0 0;
+    padding: 40px;
+    text-align: center;
+    background-color: var(--nav-bar_color);
+    transform: translateY(-100%);
+    z-index: -100;
+    transition: all 0.4s linear;
+    opacity: 0;
+}
+.for_low li{
+    margin: 10px;
+}
+
+.for_low li:hover{
+    color: var(--main-color);
+}
+
+.for_low[data-visible = "true"]{
+    transform: translateY(0%);
+}
+
+@media (max-width:426px)
+{
+    .for_low{
+        display: block;
+    }
+}
+
+/* Main section begains */
+section{
+    height: auto;
+    width: 80vw;
+    margin: 20px auto 100px auto;
+}
+
+.home_section{
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.image{
+    position: relative;
+}
+
+.image img{
+    height: 650px;
+    margin: 50Px -70px 50px 50px;
+}
+
+.text{
+    font-size: 40px;
+    z-index: 1000;
+    color: var(--main-darkcolor);
+}
+
+.special{
+    color: var(--secondary-darkcolor);
+}
+
+.quote{
+    font-size: 25px;
+    position: relative;
+    display: flex;
+    margin: 0 0 0 100px;
+    color: var(--secondary-darkcolor);
+}
+
+.quote::after, .quote::before{
+    content: '';
+    width: 50px;
+    height: 1px;
+    background-color:  var(--secondary-darkcolor);
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.quote::after{
+    left: -60px;
+}
+.quote::before{
+    right: 130px;
+}
+
+.links{
+    display: flex;
+    gap: 1rem;
+    margin: 0 0 0 70px;
+}
+
+.links svg:hover{
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.buttons{
+    margin: 0px 0 0 60px;
+}
+
+.Download_me{
+    background-color: var(--mainscreen-color);
+    color: var(--secondary-darkcolor);
+    border: 1px solid var(--secondary-darkcolor);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5%;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+.hire_me{
+    background-color: var(--mainscreen-color);
+    color: var(--secondary-darkcolor);
+    border: 1px solid var(--secondary-darkcolor);
+    font-size: 20px;
+    padding: 10px;
+    border-radius: 5%;
+    transition: all 0.3s linear;
+    cursor: pointer;
+}
+
+.Download_me:hover{
+    background-color: var(--secondary-darkcolor);
+    color: var(--mainscreen-color);
+    border-radius: 5%;
+}
+.hire_me:hover{
+    background-color: var(--secondary-darkcolor);
+    color: var(--mainscreen-color);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5%;
+}
+
+.text{
+    margin: 0 0 0 30px;
+}
+
+path{
+    fill: var(--secondary-darkcolor) !important;
+}
+
+section:nth-child(even)
+{
+    background-color: var(--mainscreen-color);
+}
+section:nth-child(odd)
+{
+    background-color: var(--mainscreen-color);
+}
+
+
+.main_text{
+    padding: 50px;
+    display: grid;
+}
+
+.main_text .special{
+    font-size: 60px;
+    font-weight: 800;
+}
+
+.secondary_text{
+    margin: 50px 0 20px 11em;
+    color:var(--main-darkcolor);
+    font-size: 20px;
+    text-align: justify;
+}
+
+.highlight{
+    color: var(--secondary-darkcolor);
+}
