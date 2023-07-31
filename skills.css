@@ -1,0 +1,83 @@
+.skills_container{
+    padding: 20px 5px 20px 5px;
+}
+
+#SKILLS h1, .head{
+    text-align: center;
+    text-transform:uppercase ;
+    margin-bottom: 40px;
+    font-size: 40px;
+}
+
+h1 a{
+    text-decoration: none;
+}
+
+h1 span{
+    color: var(--secondary-darkcolor);
+}
+.head{
+    font-weight: bold;
+    font-size: 25px;
+}
+
+.experienc, .skill{
+    padding: 20px;
+    border: 1px solid var(--secondary-darkcolor);
+    margin-bottom:10px ;
+}
+
+.main_skills .experienc{
+    position: relative;
+
+}
+/* .main_skills .skills{
+    height: 50vh;
+} */
+
+.main_skills a{
+    text-decoration: none;
+    color: var(--second-color);
+}
+
+.company_name{
+    font-weight: 800;
+    font-size: 25px;
+}
+
+.other{
+    font-size: 28px;
+    margin-top: 20px;
+    font-weight: 800;
+}
+
+.skill, .experienc{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.skill ul{
+    display: flex;
+    flex-direction: row;
+}
+
+@media (max-width:426px){
+    .skill ul{
+        flex-direction: column;
+    }
+    
+}
+
+.skill ul svg{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+@media (max-width:426px){
+    .company_name,.other{
+        font-size: 20px;
+    }
+}

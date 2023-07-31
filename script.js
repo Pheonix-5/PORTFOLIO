@@ -1,8 +1,8 @@
 const mobilebtn = document.querySelector(".hamburgur");
 const navmenu = document.querySelector(".for_low");
-var loader = document.getElementById("preloader");
 const resume = document.querySelector('.Download_me');
 const resume_btn = document.querySelector('.resume');
+const close_btn = document.querySelector('.close_btn');
 
 mobilebtn.addEventListener("click", () =>{
     const visibility = navmenu.getAttribute('data-visible');
@@ -31,13 +31,19 @@ function change(){
         }
     };
 
-window.addEventListener("load",function(){
-    loader.style.display = "none";
-});
 
 resume.addEventListener('click',()=>{
     const visibility = resume_btn.getAttribute('data-visible');
-    console.log(visibility);
+    if(visibility === "false"){
+        resume_btn.setAttribute('data-visible',true);
+    }
+    else if(visibility === "true"){
+        resume_btn.setAttribute('data-visible',false);
+    }
+});
+
+close_btn.addEventListener('click',()=>{
+    const visibility = resume_btn.getAttribute('data-visible');
     if(visibility === "false"){
         resume_btn.setAttribute('data-visible',true);
     }
