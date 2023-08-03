@@ -522,9 +522,10 @@ section:nth-child(odd)
 }
 
 
-section:nth-child(1){
+/* section:nth-child(1){
     display: none;
 }
 section:nth-child(2){
     display: none;
 }
+ */
