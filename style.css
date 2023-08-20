@@ -25,7 +25,7 @@ body{
 }
 
 #preloader{
-    background: #000 url(assest/loading.gif) no-repeat center ;
+    background: #000 url(images/loading.gif) no-repeat center ;
     background-size: 25%;
     height: 100%;
     width: 100%;
