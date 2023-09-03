@@ -1,0 +1,149 @@
+
+.outer{
+    height: auto;
+}
+.inner{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.C_HEAD{
+    width: 100%;
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: bolder;
+    color: var(--secondary-darkcolor);
+    text-shadow: 2px 1px rgba(6, 6, 6, 0.53);
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.C_HEAD::after, .C_HEAD::before{
+    content: "";
+    display: flex;
+    background-color: var(--secondary-darkcolor);
+    filter: drop-shadow(1px 1px black);
+    height: 2px;
+    width: 100px;
+    position: absolute;
+    top: 50%;
+}
+.C_HEAD::after{
+    right: 7rem;
+}
+.C_HEAD::before{
+    left: 7rem;
+}
+
+.C_socials{
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    margin: 100px 0 10px 0 ;
+}
+.C_socials .socialprofile{
+    display: flex;
+    justify-content: space-between;
+    border-bottom:none ;
+}
+
+.C_socials a{
+    text-decoration: none;
+    color: black;
+}
+
+.s_email{
+    text-align: center;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+}
+.s_email a{
+    color: black;
+}
+
+.C_socials, .s_email{
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+.INSTAGRAM, .TWITTER, .LINKDIN{
+    display: flex;
+    height: 100px;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border-top: 1px solid black;
+}
+.INSTAGRAM:hover, .LINKDIN:hover, .TWITTER:hover{
+    cursor: pointer;
+}
+
+.INSTAGRAM:hover{
+    background-color: pink;
+}
+.LINKDIN:hover{
+    background-color: rgba(18, 128, 255, 0.596);
+}
+.TWITTER:hover{
+    background-color: rgba(0, 217, 255, 0.596);
+}
+
+.MAIL{
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MAIL:hover{
+    text-decoration: line-through;
+    background-color: rgba(253, 76, 76, 0.543);
+}
+
+.Contact_text{
+    height: 10vh;
+    width: 100%;
+    background-color: aqua !important;
+    margin: 20px;
+    padding: 10px;
+}
+
+.text_c{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    padding: 30px 0 30px 0;
+    flex-direction: column;
+}
+
+.text_c_in{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.text_quote{
+    font-size: 25px;
+    color: var(--secondary-darkcolor);
+}
+@media (max-width:769px){
+    .socialprofile{
+        flex-direction: column;
+    }
+    .C_HEAD::after{
+        right: 1rem;
+        width: 60px;
+    }
+    .C_HEAD::before{
+        left: 1rem;
+        width: 60px;
+    }
+    .text_c_in{
+        font-size: 30px;
+        text-align: center;
+    }
+    
+    .text_quote{
+        font-size: 20px;
+    }
+}

@@ -12,9 +12,11 @@ open_skill.addEventListener("click", () =>{
     const visibility = skill.getAttribute('data-visible');
     if(visibility === "false"){
         skill.setAttribute('data-visible',true);
+        window.scrollBy(0,150);
     }
     else if(visibility === "true"){
         skill.setAttribute('data-visible',false);
+        window.scrollBy(0,-150);
     }
     
 });
@@ -23,9 +25,11 @@ open_exp.addEventListener("click", () =>{
     const visibility = exp.getAttribute('data-visible');
     if(visibility === "false"){
         exp.setAttribute('data-visible',true);
+        window.scrollBy(0,200);
     }
     else if(visibility === "true"){
         exp.setAttribute('data-visible',false);
+        window.scrollBy(0,-200);
     }
     
 });
@@ -76,3 +80,4 @@ close_btn.addEventListener('click',()=>{
         resume_btn.setAttribute('data-visible',false);
     }
 });
+

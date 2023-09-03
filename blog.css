@@ -1,0 +1,123 @@
+#BLOG{
+    isolation: isolate;
+}
+.blog_heading{
+
+    background-color: white;
+    display: flex;
+    gap: 0.2rem;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+    top: 7vh;
+    height: 20vh;
+    z-index: 10000;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.blog_heading .main_first{
+    font-size: 3.5rem;
+    font-weight: bolder;
+    color: var(--secondary-darkcolor);
+    text-shadow: 2px 1px black;
+}
+
+.blog_heading span.quote_second{
+    font-size: 1.3rem;
+    font-weight: 500;
+    text-shadow: 1px 1px white;
+    padding: 10px;
+}
+
+span.quote_name{
+    float: right;
+}
+
+.blog_content{
+    display: flex;
+    flex-direction: column;
+}
+.b_gs{
+    display: flex;
+    height: auto;
+    margin: 20px;
+    transition: all 0.3s linear;
+}
+
+.b_gs .b_img{
+    height: auto;
+    width: 50%;
+}
+
+.b_img img{
+    width: 100%;
+}
+.b_gs .b_data{
+    height: auto;
+    width: 50%;
+}
+
+.b_gs:nth-child(odd){
+    flex-direction: row-reverse;
+    .b_data{
+        margin: auto 30px auto 0px;
+    }
+}
+.b_gs:nth-child(even){
+    .b_data{
+        margin: auto 0 auto 30px;
+    }
+}
+
+
+.B_d_heading{
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--secondary-darkcolor);
+}
+.B_d_data{
+    font-size: 1.2rem;
+    text-align: justify;
+    font-weight: 500;
+}
+
+.B_d_data a{
+    text-decoration: none;
+}
+
+.b_gs:hover{
+    transform: scale(1.01);
+}
+
+@media (max-width:769px){
+    .b_gs{
+        flex-direction: column !important;
+    }
+    .b_img, .b_data{
+        width: 100% !important;
+        margin: auto;
+    }
+    .blog_heading{
+        transform: translateX(0%);
+        width: 100%;
+        margin-bottom: 50px;
+    }
+    .b_gs:nth-child(odd){
+        .b_data{
+            margin: auto;
+        }
+    }
+    .b_gs:nth-child(even){
+        .b_data{
+            margin: auto ;
+        }
+    }
+    .main_first{
+        font-size: 3rem !important;
+    }
+    .quote_second{
+        font-size: 1rem !important;
+    }
+}

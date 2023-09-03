@@ -1,0 +1,160 @@
+#PROJECTS h1{
+    text-align: center;
+    font-size: 50px;
+    color: var(--secondary-darkcolor);
+    text-shadow: 1px 1px  black;
+    margin: 20px;
+    position: sticky;
+    top: 66px;
+    background-color: white;
+    z-index: 10000;
+}
+
+.P_ts{
+    height: auto;
+    margin-bottom: 10px;
+    display: flex;
+    gap: 2rem;
+    flex-direction: row;
+    align-items: center;
+    padding: 5px;
+    background-color: transparent;
+}
+.projects section:nth-child(even){
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+.projects{
+    overflow-x: hidden;
+    /* background: url(assest/blob-scatter-haikei.svg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-attachment: fixed; */
+}
+
+.pic, .desp{
+    width: 50%;
+}
+
+.overimg{
+    width: 100%;
+    filter: drop-shadow(1px 2px 1px rgba(0, 0, 0, 0.365));
+    display: flex;
+    transition: all 0.3s linear;
+    position: relative;
+}
+
+.desp{
+    display: flex;
+    flex-direction: column;
+    margin: 30px;
+}
+.desp p{
+    text-align: left;
+    font-weight: 500 ;
+    font-size: 1.2rem;
+    color: black;
+}
+.Heading{
+    font-size: 2rem ;
+    font-weight: bold;
+    color: var(--secondary-darkcolor);
+}
+.link_img{
+    font-weight: 500;
+    font-size: 1.2rem;
+}
+.link_img a{
+    color: red;
+    text-decoration: none;
+    transition: all 0.3s linear;
+}
+.link_img a:hover{
+    color: var(--secondary-darkcolor);
+}
+.pic{
+    isolation: isolate;
+    z-index: 0;
+    position: relative;
+    margin: 30px;
+    transition: all 0.3s linear;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.377);
+    filter:blur(1px);
+}
+.pic:hover{
+    transform: scale(1.02);
+    filter: blur(0px);
+}
+.pic::before {
+    content: " ";
+    position: absolute;
+    z-index: 1000;
+    filter: blur(0);
+    transition: all 0.2s ease-in-out;
+    top: 0;
+    width: 0%;
+    font-size: 40px;
+    font-weight: bold;
+    align-content: center;
+    color: var(--main-darkcolor);
+}
+
+.pic:hover::before{
+    display: flex;
+    height:100%;
+    width: 100%;
+    content: " VISIT ";
+    text-align:center;
+    justify-content:center;
+    align-items: center;
+    text-shadow: 2px 2px var(--secondary-darkcolor); 
+    filter: blur(0);
+}
+
+/* 
+@media (max-width:426px){
+    .P_ts{
+        flex-direction: column !important;
+        align-items:start;
+        text-align:justify;
+        padding: 20px 0 0 0;
+    }
+    .pic{
+        width: 90%;
+        margin: auto;
+        filter: blur(0);
+    }
+    .desp{
+        width: 90%;
+    }
+    #PROJECTS h1{
+        background-color: transparent !important;
+    }
+} */
+
+@media (max-width:769px){    
+    .P_ts{
+    flex-direction: column !important;
+    align-items:start;
+    text-align:justify;
+    padding: 20px 0 20px 0;
+    border: 1px solid black;
+    flex-direction: column-reverse !important;
+}
+.pic{
+    width: 90%;
+    margin: auto;
+    filter: blur(0);
+}
+.desp{
+    width: 90%;
+    margin: auto;
+}
+#PROJECTS h1{
+    background-color: transparent !important;
+}
+}

@@ -16,21 +16,22 @@
 
 html{
     scroll-behavior: smooth;
-    scroll-padding-top: 90px;
+    scroll-padding-top: 100px;
 }
 
 
 body{
     background-color:var(--mainscreen-color) ;
+    overflow-x: hidden;
 }
 
 #preloader{
-    background: #000 url(assest/images.jpeg) no-repeat center ;
+    background: #000 url(assest/loading.gif) no-repeat center ;
     background-size: 25%;
     height: 100%;
     width: 100%;
     position: fixed;
-    z-index: 11000;
+    z-index: 9999999;
 }
 
 @media (max-width:426px){
@@ -57,7 +58,8 @@ header{
     position: sticky;
     top: 0;
     background-color: var(--main-darkcolor);
-    z-index: 9999;
+    z-index: 999999;
+    overflow-x:hidden ;
 }
 nav{
     display: flex;
@@ -429,6 +431,10 @@ section{
     transition: all 0.3s linear;
     cursor: pointer;
 }
+.Download_me a{
+    text-decoration: none;
+}
+
 .hire_me{
     background-color: var(--mainscreen-color);
     color: var(--secondary-darkcolor);
@@ -451,9 +457,10 @@ section{
 }
 
 .Download_me:hover{
-    background-color: var(--secondary-darkcolor);
+    background:  var(--secondary-darkcolor);
     color: var(--mainscreen-color);
     border-radius: 5%;
+    background-position:center;
 }
 .hire_me:hover{
     background-color: var(--secondary-darkcolor);
@@ -470,15 +477,22 @@ path{
     fill: var(--secondary-darkcolor) !important;
 }
 
-section:nth-child(even)
+/* section:nth-child(even)
 {
     background-color: var(--mainscreen-color);
 }
 section:nth-child(odd)
 {
     background-color: var(--mainscreen-color);
-}
+} */
 
+
+/* .abt{
+    background: url(assest/blob-scene-haikei.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+} */
 
 .main_text{
     padding: 50px;
@@ -519,4 +533,67 @@ section:nth-child(odd)
       
     }
 
+}
+
+
+footer{
+    height: 20vh;
+    background-color: #2a2a2a;
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.F_name{
+    font-weight: 600;
+    display: flex;
+    flex-direction: column;
+}
+
+.f_socials{
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.f_insta:hover{
+    cursor: pointer;
+    color: pink;
+}
+.f_link:hover{
+    cursor: pointer;
+    color: rgb(36, 125, 249);
+}
+.f_git:hover{
+    cursor: pointer;
+    color: grey;
+}
+.f_twit:hover{
+    cursor: pointer;
+    color: rgb(33, 188, 255);
+}
+.f_med:hover{
+    cursor: pointer;
+    color: rgb(255, 0, 0);
+}
+.F_name a{
+    color: var(--secondary-darkcolor);
+    text-decoration: none;
+}
+
+.f_up{
+    font-size: 30px;
+}
+.f_down{
+    color: grey;
+}
+@media(max-width:426px){
+    .f_up{
+        font-size: 20px;
+    }
+    .f_down{
+        font-size: 10px;
+    }
 }
