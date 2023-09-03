@@ -562,23 +562,23 @@ footer{
     color: white;
 }
 
-.f_insta a:hover{
+.f_insta:hover{
     cursor: pointer;
     color: pink;
 }
-.f_link a:hover{
+.f_link:hover{
     cursor: pointer;
     color: rgb(36, 125, 249);
 }
-.f_git a:hover{
+.f_git:hover{
     cursor: pointer;
     color: grey;
 }
-.f_twit a:hover{
+.f_twit:hover{
     cursor: pointer;
     color: rgb(33, 188, 255);
 }
-.f_med a:hover{
+.f_med:hover{
     cursor: pointer;
     color: rgb(255, 0, 0);
 }
