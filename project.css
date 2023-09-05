@@ -7,7 +7,7 @@
     position: sticky;
     top: 66px;
     background-color: white;
-    z-index: 10000;
+    z-index: 1000;
 }
 
 .P_ts{
