@@ -116,6 +116,10 @@
         height: 50px;
         margin: 1px;
     }
+    .top{
+        font-size: 30px;
+    }
+    
 }
 .first, .second{
     margin: 10px 10px 15px 10px;
